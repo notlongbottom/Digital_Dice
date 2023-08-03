@@ -38,3 +38,15 @@ begin
     endcase
   end
 end
+
+always @(posedge clk or posedge rst)
+begin
+  if (rst) // Reset the rolling flag when the dice is not rolling
+    rolling <= 1'b0;
+  else if (rolling == 1'b0) // Start rolling when the dice is not already rolling
+  begin
+    rolling <= 1'b1;
+    dice_number <= 4'd0; // Reset dice number before rolling
+  end
+end
+
