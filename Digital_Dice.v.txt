@@ -1,5 +1,22 @@
 module DigitalDice(
   input clk,         // Clock input
   input rst,         // Reset input
-  output reg [6:0] seg // Seven-segment display output
+  output reg [6:0] seg // Seven-segment display o/p
 );
+
+reg [3:0] dice_number; // Register to store the dice number
+reg rolling;          // Flag to indicate dice is rolling
+
+always @(posedge clk or posedge rst)
+begin
+  if (rst) // Reset the dice number and rolling flag
+  begin
+    dice_number <= 4'd0;
+    rolling <= 1'b0;
+  end
+  else
+  begin
+    if (rolling) // If dice is rolling, generate random numbers
+      dice_number <= dice_number + 1;
+  end
+end
