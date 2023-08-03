@@ -1,0 +1,5 @@
+module DigitalDice(
+  input clk,         // Clock input
+  input rst,         // Reset input
+  output reg [6:0] seg // Seven-segment display output
+);
