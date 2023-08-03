@@ -1,11 +1,13 @@
 module DigitalDice(
   input clk,         // Clock input
   input rst,         // Reset input
-  output reg [6:0] seg // Seven-segment display o/p
+  output reg [6:0] seg // Seven-segment display output
 );
+
 
 reg [3:0] dice_number; // Register to store the dice number
 reg rolling;          // Flag to indicate dice is rolling
+
 
 always @(posedge clk or posedge rst)
 begin
@@ -20,6 +22,7 @@ begin
       dice_number <= dice_number + 1;
   end
 end
+
 
 always @(posedge clk or posedge rst)
 begin
@@ -38,6 +41,7 @@ begin
     endcase
   end
 end
+
 
 always @(posedge clk or posedge rst)
 begin
