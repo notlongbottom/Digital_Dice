@@ -1,0 +1,24 @@
+# Digital Dice using Verilog
+
+# Overview
+This project is a digital dice implemented using Verilog, which simulates a rolling dice and displays random numbers on a seven-segment display. It was developed as part of an Electrical and Computer Engineering (ECE) course to demonstrate proficiency in Verilog programming and digital circuit design.
+
+## Features
+- Generates random numbers between 1 to 6 to simulate a rolling dice.
+- Controls a seven-segment display to show the dice number visually.
+
+## Prerequisites
+- A Verilog simulator (e.g., ModelSim) to run the code.
+- Alternatively, an FPGA development board with a seven-segment display can be used for hardware implementation.
+
+## Getting Started
+1. Clone the repository
+2. Navigate to the project folder
+3. Run the simulation
+4. Observe the simulation output or program the code on your FPGA board for hardware testing.
+
+## Code Structure
+The project consists of a single Verilog file named `Digital_Dice.v`, which contains the main logic for the digital dice.
+
+
+
